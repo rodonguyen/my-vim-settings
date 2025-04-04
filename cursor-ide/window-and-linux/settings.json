@@ -1,0 +1,159 @@
+{
+	"vim.timeout": 200,
+	"vim.useSystemClipboard": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["k", "j"],
+			"after": ["<Esc>", "l"]
+		}
+	],
+	"vim.useCtrlKeys": true,
+	"vim.handleKeys": {
+		"<C-f>": true,
+		"<C-a>": false
+	},
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["v", "n"],
+			"after": ["v", "g", "_", "y"]
+		},
+		{
+			// find the source definition instead of the .d.ts file
+			// 'f'ind the source 'd'efinition
+			"before": ["f", "d"],
+			"commands": ["typescript.goToSourceDefinition"]
+		},
+		{
+			// df is easier to hit than gd
+			// go to the 'd'e'f'inition
+			"before": ["d", "f"],
+			"after": ["g", "d"]
+		},
+		{
+			"before": ["d", "n"],
+			"after": ["d", "g", "_"]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<C-n>"],
+			"commands": [":nohl"]
+		}
+	],
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"indentRainbow.indentSetter": {},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"git.ignoreMissingGitWarning": true,
+	"debug.onTaskErrors": "debugAnyway",
+	"debug.confirmOnExit": "always",
+	"jupyter.interactiveWindow.creationMode": "perFile",
+	"editor.indentSize": "tabSize",
+	"prettier.tabWidth": 4,
+	"prettier.jsxSingleQuote": true,
+	"prettier.printWidth": 100,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"git.openRepositoryInParentFolders": "never",
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"indentRainbow.updateDelay": 500,
+	"indentRainbow.lightIndicatorStyleLineWidth": 2,
+	"editor.minimap.enabled": false,
+	"update.showReleaseNotes": false,
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"jupyter.askForKernelRestart": false,
+	"solidity.packageDefaultDependenciesContractsDirectory": "",
+	"solidity.packageDefaultDependenciesDirectory": "node_modules",
+	"solidity.telemetry": true,
+	"[solidity]": {
+		"editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"gitlens.ai.experimental.provider": "openai",
+	"gitlens.ai.experimental.openai.model": "gpt-4-32k",
+	"indentRainbow.colors": [
+		"rgba(255,255,64,0.07)",
+		"rgba(127,255,127,0.07)",
+		"rgba(255,127,255,0.07)",
+		"rgba(79,236,236,0.07)"
+	],
+	"indentRainbow.colorOnWhiteSpaceOnly": true,
+	"explorer.confirmPasteNative": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false
+	},
+	"[csharp]": {
+		"editor.defaultFormatter": "csharpier.csharpier-vscode"
+	},
+	"files.autoSave": "onFocusChange",
+	"dotnet.server.useOmnisharp": true,
+	"omnisharp.sdkPath": "/usr/lib/dotnet/sdk/8.0.103",
+	"omnisharp.sdkVersion": "8.0.103",
+	"json.schemas": [],
+	"launch": {
+		"configurations": [],
+		"compounds": []
+	},
+	"csharp.inlayHints.enableInlayHintsForTypes": true,
+	"workbench.sideBar.location": "right",
+	"githubPullRequests.createOnPublishBranch": "never",
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"prisma.showPrismaDataPlatformNotification": false,
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"github.copilot.editor.enableAutoCompletions": true,
+	"editor.detectIndentation": false,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"prettier.configPath": ".prettierrc",
+	"notebook.defaultFormatter": "esbenp.prettier-vscode",
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"editor.tabSize": 2,
+	"githubPullRequests.pullBranch": "never",
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"azureLogicAppsStandard.autoRuntimeDependenciesPath": "/home/codespace/.azurelogicapps/dependencies",
+	"azureLogicAppsStandard.nodeJsBinaryPath": "node",
+	"azureLogicAppsStandard.funcCoreToolsBinaryPath": "func",
+	"azureLogicAppsStandard.dotnetBinaryPath": "dotnet",
+	"dotnetAcquisitionExtension.existingDotnetPath": [],
+	"editor.formatOnSave": true,
+	"azureLogicAppsStandard.validateDotNetSDK": false,
+	"editor.codeActionsOnSave": {},
+	"cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+	"csharp.suppressDotnetInstallWarning": true,
+	"vscode-edge-devtools.webhintInstallNotification": true,
+	"editor.quickSuggestions": {
+		"strings": "on",
+		"comments": "on"
+	},
+	"sync.quietSync": true,
+	"sync.forceUpload": true,
+	"sync.autoUpload": true,
+	"sync.autoDownload": true,
+	"sync.gist": "07e0c719e328408c1e6b7380a92c2c2e"
+}
