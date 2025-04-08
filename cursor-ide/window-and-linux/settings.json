@@ -1,3 +1,6 @@
+
+
+
 {
 	"vim.timeout": 200,
 	"vim.useSystemClipboard": true,
@@ -24,8 +27,7 @@
 			"commands": ["typescript.goToSourceDefinition"]
 		},
 		{
-			// df is easier to hit than gd
-			// go to the 'd'e'f'inition
+			// df is easier to hit than gd, go to the 'd'e'f'inition
 			"before": ["d", "f"],
 			"after": ["g", "d"]
 		},

@@ -1,159 +1,161 @@
-{
-	"vim.timeout": 200,
-	"vim.useSystemClipboard": true,
-	"vim.insertModeKeyBindings": [
-		{
-			"before": ["k", "j"],
-			"after": ["<Esc>", "l"]
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	// Move to the previous/next editor.
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.previousEditor"
+	},
+
+	// Move active editor left or right (useful for full-stack web dev).
+	{
+		"key": "ctrl+shift+j",
+		"command": "moveActiveEditor",
+		"args": {
+			"to": "left"
 		}
-	],
-	"vim.useCtrlKeys": true,
-	"vim.handleKeys": {
-		"<C-f>": true,
-		"<C-a>": false
 	},
-	"vim.normalModeKeyBindings": [
-		{
-			"before": ["v", "n"],
-			"after": ["v", "g", "_", "y"]
-		},
-		{
-			// find the source definition instead of the .d.ts file
-			// 'f'ind the source 'd'efinition
-			"before": ["f", "d"],
-			"commands": ["typescript.goToSourceDefinition"]
-		},
-		{
-			// df is easier to hit than gd
-			// go to the 'd'e'f'inition
-			"before": ["d", "f"],
-			"after": ["g", "d"]
-		},
-		{
-			"before": ["d", "n"],
-			"after": ["d", "g", "_"]
+	{
+		"key": "ctrl+shift+k",
+		"command": "moveActiveEditor",
+		"args": {
+			"to": "right"
 		}
-	],
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<C-n>"],
-			"commands": [":nohl"]
-		}
-	],
-	"git.enableSmartCommit": true,
-	"git.confirmSync": false,
-	"git.autofetch": true,
-	"explorer.confirmDragAndDrop": false,
-	"explorer.confirmDelete": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"indentRainbow.indentSetter": {},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"security.workspace.trust.untrustedFiles": "open",
-	"editor.unicodeHighlight.ambiguousCharacters": false,
-	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
+	// Traverse IntelliSense suggestions with vim keybindings.
+	{
+		"key": "ctrl+j",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 	},
-	"git.ignoreMissingGitWarning": true,
-	"debug.onTaskErrors": "debugAnyway",
-	"debug.confirmOnExit": "always",
-	"jupyter.interactiveWindow.creationMode": "perFile",
-	"editor.indentSize": "tabSize",
-	"prettier.tabWidth": 4,
-	"prettier.jsxSingleQuote": true,
-	"prettier.printWidth": 100,
-	"prettier.useTabs": true,
-	"prettier.singleQuote": true,
-	"git.openRepositoryInParentFolders": "never",
-	"terminal.integrated.defaultProfile.windows": "PowerShell",
-	"indentRainbow.updateDelay": 500,
-	"indentRainbow.lightIndicatorStyleLineWidth": 2,
-	"editor.minimap.enabled": false,
-	"update.showReleaseNotes": false,
-	"notebook.cellToolbarLocation": {
-		"default": "right",
-		"jupyter-notebook": "left"
+	{
+		"key": "ctrl+k",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 	},
-	"jupyter.askForKernelRestart": false,
-	"solidity.packageDefaultDependenciesContractsDirectory": "",
-	"solidity.packageDefaultDependenciesDirectory": "node_modules",
-	"solidity.telemetry": true,
-	"[solidity]": {
-		"editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+	// Traverse VSCode quick open options with vim keybindings.
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"gitlens.ai.experimental.provider": "openai",
-	"gitlens.ai.experimental.openai.model": "gpt-4-32k",
-	"indentRainbow.colors": [
-		"rgba(255,255,64,0.07)",
-		"rgba(127,255,127,0.07)",
-		"rgba(255,127,255,0.07)",
-		"rgba(79,236,236,0.07)"
-	],
-	"indentRainbow.colorOnWhiteSpaceOnly": true,
-	"explorer.confirmPasteNative": false,
-	"workbench.iconTheme": "material-icon-theme",
-	"github.copilot.enable": {
-		"*": true,
-		"plaintext": false,
-		"markdown": false,
-		"scminput": false
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
 	},
-	"[csharp]": {
-		"editor.defaultFormatter": "csharpier.csharpier-vscode"
+
+	// VSCode terminal commands. Still in Mac form, not editted for Windows.
+  // {
+  //   "key": "cmd+n",
+  //   "command": "workbench.action.terminal.newInActiveWorkspace"
+  // },
+  // {
+  //   "key": "cmd+enter",
+  //   "command": "workbench.action.terminal.toggleTerminal"
+  // },
+  // {
+  //   "key": "cmd+ctrl+enter",
+  //   "command": "workbench.action.toggleMaximizedPanel"
+  // },
+  // {
+  //   "key": "cmd+d",
+  //   "command": "workbench.action.terminal.split",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "cmd+\\",
+  //   "command": "-workbench.action.terminal.split",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "cmd+k",
+  //   "command": "workbench.action.terminal.focusNextPane",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "alt+cmd+down",
+  //   "command": "-workbench.action.terminal.focusNextPane",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "cmd+j",
+  //   "command": "workbench.action.terminal.focusPreviousPane",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "alt+cmd+up",
+  //   "command": "-workbench.action.terminal.focusPreviousPane",
+  //   "when": "terminalFocus && terminalProcessSupported"
+  // },
+  // {
+  //   "key": "cmd+w",
+  //   "command": "workbench.action.terminal.kill",
+  //   "when": "terminalFocus"
+  // },
+
+  // Ensure that tab button works in vim.
+  // {
+  //   "key": "tab",
+  //   "command": "tab",
+  //   "when": "editorTextFocus && !editorTabMovesFocus"
+  // },
+  {
+    "key": "shift+tab",
+    "command": "outdent",
+    "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+  
+  // The below is mine, not related to VIM
+	{
+		"key": "ctrl+alt+z",
+		"command": "python.execInTerminal-icon"
 	},
-	"files.autoSave": "onFocusChange",
-	"dotnet.server.useOmnisharp": true,
-	"omnisharp.sdkPath": "/usr/lib/dotnet/sdk/8.0.103",
-	"omnisharp.sdkVersion": "8.0.103",
-	"json.schemas": [],
-	"launch": {
-		"configurations": [],
-		"compounds": []
+	{
+		"key": "alt+\\",
+		"command": "-editor.action.inlineSuggest.trigger",
+		"when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
 	},
-	"csharp.inlayHints.enableInlayHintsForTypes": true,
-	"workbench.sideBar.location": "right",
-	"githubPullRequests.createOnPublishBranch": "never",
-	"[prisma]": {
-		"editor.defaultFormatter": "Prisma.prisma"
+	{
+		"key": "ctrl+i",
+		"command": "composerMode.agent"
 	},
-	"prisma.showPrismaDataPlatformNotification": false,
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter"
+	{
+		"key": "ctrl+p",
+		"command": "-expandLineSelection",
+		"when": "textInputFocus"
 	},
-	"github.copilot.editor.enableAutoCompletions": true,
-	"editor.detectIndentation": false,
-	"diffEditor.ignoreTrimWhitespace": true,
-	"prettier.configPath": ".prettierrc",
-	"notebook.defaultFormatter": "esbenp.prettier-vscode",
-	"[c]": {
-		"editor.defaultFormatter": "ms-vscode.cpptools"
+	{
+		"key": "ctrl+p",
+		"command": "-extension.vim_ctrl+p",
+		"when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
 	},
-	"editor.tabSize": 2,
-	"githubPullRequests.pullBranch": "never",
-	"[xml]": {
-		"editor.defaultFormatter": "redhat.vscode-xml"
+	{
+		"key": "ctrl+k",
+		"command": "-aipopup.action.modal.generate",
+		"when": "editorFocus && !composerBarIsVisible"
 	},
-	"azureLogicAppsStandard.autoRuntimeDependenciesPath": "/home/codespace/.azurelogicapps/dependencies",
-	"azureLogicAppsStandard.nodeJsBinaryPath": "node",
-	"azureLogicAppsStandard.funcCoreToolsBinaryPath": "func",
-	"azureLogicAppsStandard.dotnetBinaryPath": "dotnet",
-	"dotnetAcquisitionExtension.existingDotnetPath": [],
-	"editor.formatOnSave": true,
-	"azureLogicAppsStandard.validateDotNetSDK": false,
-	"editor.codeActionsOnSave": {},
-	"cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
-	"csharp.suppressDotnetInstallWarning": true,
-	"vscode-edge-devtools.webhintInstallNotification": true,
-	"editor.quickSuggestions": {
-		"strings": "on",
-		"comments": "on"
+	{
+		"key": "ctrl+shift+k",
+		"command": "-aipopup.action.modal.generate",
+		"when": "editorFocus && !composerBarIsVisible"
 	},
-	"sync.quietSync": true,
-	"sync.forceUpload": true,
-	"sync.autoUpload": true,
-	"sync.autoDownload": true,
-	"sync.gist": "07e0c719e328408c1e6b7380a92c2c2e"
-}
+	{
+		"key": "ctrl+w",
+		"command": "-extension.vim_ctrl+w",
+		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+	},
+	{
+		"key": "meta+f",
+		"command": "extension.vim_ctrl+f",
+		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-extension.vim_ctrl+f",
+		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+]
