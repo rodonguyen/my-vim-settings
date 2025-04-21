@@ -49,67 +49,67 @@
 	},
 
 	// VSCode terminal commands. Still in Mac form, not editted for Windows.
-  // {
-  //   "key": "cmd+n",
-  //   "command": "workbench.action.terminal.newInActiveWorkspace"
-  // },
-  // {
-  //   "key": "cmd+enter",
-  //   "command": "workbench.action.terminal.toggleTerminal"
-  // },
-  // {
-  //   "key": "cmd+ctrl+enter",
-  //   "command": "workbench.action.toggleMaximizedPanel"
-  // },
-  // {
-  //   "key": "cmd+d",
-  //   "command": "workbench.action.terminal.split",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "cmd+\\",
-  //   "command": "-workbench.action.terminal.split",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "cmd+k",
-  //   "command": "workbench.action.terminal.focusNextPane",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "alt+cmd+down",
-  //   "command": "-workbench.action.terminal.focusNextPane",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "cmd+j",
-  //   "command": "workbench.action.terminal.focusPreviousPane",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "alt+cmd+up",
-  //   "command": "-workbench.action.terminal.focusPreviousPane",
-  //   "when": "terminalFocus && terminalProcessSupported"
-  // },
-  // {
-  //   "key": "cmd+w",
-  //   "command": "workbench.action.terminal.kill",
-  //   "when": "terminalFocus"
-  // },
+	// {
+	//   "key": "cmd+n",
+	//   "command": "workbench.action.terminal.newInActiveWorkspace"
+	// },
+	// {
+	//   "key": "cmd+enter",
+	//   "command": "workbench.action.terminal.toggleTerminal"
+	// },
+	// {
+	//   "key": "cmd+ctrl+enter",
+	//   "command": "workbench.action.toggleMaximizedPanel"
+	// },
+	// {
+	//   "key": "cmd+d",
+	//   "command": "workbench.action.terminal.split",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "cmd+\\",
+	//   "command": "-workbench.action.terminal.split",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "cmd+k",
+	//   "command": "workbench.action.terminal.focusNextPane",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "alt+cmd+down",
+	//   "command": "-workbench.action.terminal.focusNextPane",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "cmd+j",
+	//   "command": "workbench.action.terminal.focusPreviousPane",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "alt+cmd+up",
+	//   "command": "-workbench.action.terminal.focusPreviousPane",
+	//   "when": "terminalFocus && terminalProcessSupported"
+	// },
+	// {
+	//   "key": "cmd+w",
+	//   "command": "workbench.action.terminal.kill",
+	//   "when": "terminalFocus"
+	// },
 
-  // Ensure that tab button works in vim.
-  // {
-  //   "key": "tab",
-  //   "command": "tab",
-  //   "when": "editorTextFocus && !editorTabMovesFocus"
-  // },
-  {
-    "key": "shift+tab",
-    "command": "outdent",
-    "when": "editorTextFocus && !editorTabMovesFocus"
-  },
-  
-  // The below is mine, not related to VIM
+	// Ensure that tab button works in vim.
+	// {
+	//   "key": "tab",
+	//   "command": "tab",
+	//   "when": "editorTextFocus && !editorTabMovesFocus"
+	// },
+	{
+		"key": "shift+tab",
+		"command": "outdent",
+		"when": "editorTextFocus && !editorTabMovesFocus"
+	},
+
+	// The below is mine, not related to VIM
 	{
 		"key": "ctrl+alt+z",
 		"command": "python.execInTerminal-icon"
@@ -149,7 +149,7 @@
 		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
 	},
 	{
-		"key": "meta+f",
+		"key": "ctrl+f",
 		"command": "extension.vim_ctrl+f",
 		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
 	},
@@ -158,4 +158,29 @@
 		"command": "-extension.vim_ctrl+f",
 		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
 	},
+	{
+		"key": "meta+f",
+		"command": "actions.find",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-actions.find",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "-editor.action.simpleInlineDiffs.rejectAll",
+		"when": "editorTextFocus && hasDisplayedSimpleDiff"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "-editor.action.startFindReplaceAction",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "-extension.vim_ctrl+h",
+		"when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+	}
 ]
