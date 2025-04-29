@@ -5,3 +5,4 @@ Install VIM extension to make sure it works.
 
 Other:
 - Enable relative line numbering
+- Disable minimap, breadcrumb
