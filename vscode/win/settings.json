@@ -1,0 +1,216 @@
+{
+	// VIM settings
+	"vim.timeout": 300,
+	"vim.useSystemClipboard": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["k", "j"], // switch to normal mode
+			"after": ["<Esc>", "l"]
+		}
+	],
+	"vim.cursorWrap": true,
+	"vim.useCtrlKeys": true,
+	"vim.handleKeys": {
+		"<C-f>": true,
+		"<C-a>": false
+	},
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["v", "n"], // No idea
+			"after": ["v", "g", "_", "y"]
+		},
+		{
+			// find the source definition instead of the .d.ts file
+			// 'f'ind the source 'd'efinition
+			"before": ["f", "d"],
+			"commands": ["typescript.goToSourceDefinition"]
+		},
+		{
+			// df is easier to hit than gd, go to the 'd'e'f'inition
+			"before": ["d", "f"],
+			"after": ["g", "d"]
+		},
+		{
+			"before": ["d", "n"],
+			"after": ["d", "g", "_"]
+		}
+	],
+	// "vim.normalModeKeyBindingsNonRecursive": [
+	// 	{
+	// 		"before": ["<C-n>"],
+	// 		"commands": [":nohl"]
+	// 	}
+	// ],
+	"vim.leader": "<Space>",
+	"vim.hlsearch": true,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// 	// NAVIGATION
+		// 	// switch b/w buffers
+		// 	{ "before": ["<S-h>"], "commands": [":bprevious"] },
+		// 	{ "before": ["<S-l>"], "commands": [":bnext"] },
+
+		// splits
+		{ "before": ["leader", "v"], "commands": [":vsplit"] }, // vertical split
+		{ "before": ["leader", "s"], "commands": [":split"] }, // horizontal split
+
+		// 	// panes
+		// 	{
+		// 		"before": ["leader", "h"],
+		// 		"commands": ["workbench.action.focusLeftGroup"]
+		// 	},
+		// 	{
+		// 		"before": ["leader", "j"],
+		// 		"commands": ["workbench.action.focusBelowGroup"]
+		// 	},
+		// 	{
+		// 		"before": ["leader", "k"],
+		// 		"commands": ["workbench.action.focusAboveGroup"]
+		// 	},
+		// 	{
+		// 		"before": ["leader", "l"],
+		// 		"commands": ["workbench.action.focusRightGroup"]
+		// 	},
+		// 	// NICE TO HAVE
+		{ "before": ["leader", "x"], "commands": [":w!"] }, // save file
+		{ "before": ["leader", "q"], "commands": [":q!"] }, // quit file
+		{ "before": ["leader", "w"], "commands": [":x!"] }, // save and quit file
+		// 	{
+		// 		"before": ["[", "d"],
+		// 		"commands": ["editor.action.marker.prev"]
+		// 	},
+		// 	{
+		// 		"before": ["]", "d"],
+		// 		"commands": ["editor.action.marker.next"]
+		// 	},
+		// 	{
+		// 		"before": ["<leader>", "c", "a"],
+		// 		"commands": ["editor.action.quickFix"]
+		// 	},
+		{ "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] }, // quick open some files
+		// 	{ "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		// Stay in visual mode while indenting
+		{ "before": ["<"], "commands": ["editor.action.outdentLines"] },
+		{ "before": [">"], "commands": ["editor.action.indentLines"] },
+		// Move selected lines while staying in visual mode
+		{ "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+		{ "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+		// toggle comment selection
+		// { "before": ["leader, "c"], "commands": ["editor.action.commentLine"] }  // doesnt suit me
+	],
+	// Vim Motions End ===
+
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"indentRainbow.indentSetter": {},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"git.ignoreMissingGitWarning": true,
+	"debug.onTaskErrors": "debugAnyway",
+	"debug.confirmOnExit": "always",
+	"jupyter.interactiveWindow.creationMode": "perFile",
+	"editor.indentSize": "tabSize",
+	"prettier.tabWidth": 4,
+	"prettier.jsxSingleQuote": true,
+	"prettier.printWidth": 100,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"git.openRepositoryInParentFolders": "never",
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"indentRainbow.updateDelay": 500,
+	"indentRainbow.lightIndicatorStyleLineWidth": 2,
+	"editor.minimap.enabled": false,
+	"update.showReleaseNotes": false,
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"jupyter.askForKernelRestart": false,
+	"solidity.packageDefaultDependenciesContractsDirectory": "",
+	"solidity.packageDefaultDependenciesDirectory": "node_modules",
+	"solidity.telemetry": true,
+	"[solidity]": {
+		"editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"gitlens.ai.experimental.provider": "openai",
+	"gitlens.ai.experimental.openai.model": "gpt-4-32k",
+	"indentRainbow.colors": [
+		"rgba(255,255,64,0.07)",
+		"rgba(127,255,127,0.07)",
+		"rgba(255,127,255,0.07)",
+		"rgba(79,236,236,0.07)"
+	],
+	"indentRainbow.colorOnWhiteSpaceOnly": true,
+	"explorer.confirmPasteNative": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"[csharp]": {
+		"editor.defaultFormatter": "csharpier.csharpier-vscode"
+	},
+	"files.autoSave": "onFocusChange",
+	"dotnet.server.useOmnisharp": true,
+	"omnisharp.sdkPath": "/usr/lib/dotnet/sdk/8.0.103",
+	"omnisharp.sdkVersion": "8.0.103",
+	"json.schemas": [],
+	"launch": {
+		"configurations": [],
+		"compounds": []
+	},
+	"csharp.inlayHints.enableInlayHintsForTypes": true,
+	"workbench.sideBar.location": "right",
+	"githubPullRequests.createOnPublishBranch": "never",
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"prisma.showPrismaDataPlatformNotification": false,
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"github.copilot.editor.enableAutoCompletions": true,
+	"editor.detectIndentation": false,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"prettier.configPath": ".prettierrc",
+	"notebook.defaultFormatter": "esbenp.prettier-vscode",
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"editor.tabSize": 2,
+	"githubPullRequests.pullBranch": "never",
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"azureLogicAppsStandard.autoRuntimeDependenciesPath": "/home/codespace/.azurelogicapps/dependencies",
+	"azureLogicAppsStandard.nodeJsBinaryPath": "\\home\\codespace\\.azurelogicapps\\dependencies\\NodeJs\\node",
+	"azureLogicAppsStandard.funcCoreToolsBinaryPath": "\\home\\codespace\\.azurelogicapps\\dependencies\\FuncCoreTools\\func",
+	"azureLogicAppsStandard.dotnetBinaryPath": "\\home\\codespace\\.azurelogicapps\\dependencies\\DotNetSDK\\dotnet.exe",
+	"dotnetAcquisitionExtension.existingDotnetPath": [],
+	"editor.formatOnSave": true,
+	"azureLogicAppsStandard.validateDotNetSDK": false,
+	"editor.codeActionsOnSave": {},
+	"vim.useSystemClipboard": true,
+	"vim.smartRelativeLine": true,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"python": true
+	}
+}
